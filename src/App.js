@@ -5,7 +5,10 @@ import { useState } from 'react'
 
 function App() {
 
-  document.getElementById("btn").checked = false;
+  const btn = document.getElementById("btn");
+  if (btn) {
+    setTimeout(() => {btn.checked = false}, 2000)
+  }
 
   const [advice, setAdvice] = useState({id: "0", advice: "Roll the dice to get an advice!"});
 
@@ -27,13 +30,12 @@ function App() {
     request.send();
   }
   
-
   return (
     <div className="App">
       <AdviceCard advice={advice} />
-      <input type="checkbox" id="btn" checked="false"/>
-      <label for="btn">
-        <div className='advice-roller' onClick={getData} tabIndex="0" >
+      <input type="checkbox" id="btn" defaultChecked={false} />
+      <label htmlFor="btn">
+        <div className='advice-roller' onClick={getData} >
           <img src={diceIcon}></img>
         </div>
       </label>

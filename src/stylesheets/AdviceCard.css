@@ -29,3 +29,30 @@
 .divider-icon {
     width: 82%;
 }
+
+@media (max-width: 550px){
+    .advice-card {
+        width: 380px;
+    }
+    .advice-id {
+        font-size: 16px;
+    }
+    .advice-text {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}
+
+
+@media (max-width: 400px){
+    .advice-card {
+        width: 350px;
+    }
+    .advice-id {
+        font-size: 12px;
+    }
+    .advice-text {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}

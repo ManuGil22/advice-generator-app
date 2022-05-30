@@ -41,8 +41,8 @@
   box-shadow: 0 0 30px 2px var(--header-color);
 }
 
-.advice-roller:target {
-  animation: rotation 2s 0s linear;
+.wait {
+  cursor: wait;
 }
 
 @keyframes rotation {
