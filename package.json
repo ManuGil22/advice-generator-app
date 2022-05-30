@@ -2,7 +2,7 @@
   "name": "advice-generator-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ManuGil22.github.io/advice-generator-app",
+  "homepage": "  https://manugil22.github.io/advice-generator-app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
