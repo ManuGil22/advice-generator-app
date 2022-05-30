@@ -8,7 +8,7 @@ function adviceCard ( {advice} ) {
             <p className="advice-text">
                 "{advice.advice}"
             </p>
-            <img className='divider-icon' src={divider}></img>
+            <img className='divider-icon' src={divider} alt="divider icon"></img>
         </div>
     );
 }
