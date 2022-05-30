@@ -5,14 +5,14 @@ import { useState } from 'react'
 
 function App() {
 
-  const btn = document.getElementById("btn");
-  if (btn) {
-    setTimeout(() => {btn.checked = false}, 2000)
-  }
-
   const [advice, setAdvice] = useState({id: "0", advice: "Roll the dice to get an advice!"});
 
   function getData() {
+
+    const btn = document.getElementById("btn");
+    if (btn) {
+      setTimeout(() => {btn.checked = false}, 2000)
+    }
     var request = new XMLHttpRequest();
 
     request.open('GET', 'https://api.adviceslip.com/advice', true);
