@@ -19,11 +19,15 @@
 .advice-roller {
   width: 65px;
   height: 65px;
+  border: none;
   border-radius: 50px;
   background-color: var(--header-color);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+label {
   position: relative;
   top: -35px;
 }
@@ -32,7 +36,7 @@
   display: none;
 }
 
-#btn:checked + label > div > img {
+#btn:checked + label > button > img{
   animation: rotation 2s 0s linear;
 }
 
@@ -41,8 +45,15 @@
   box-shadow: 0 0 30px 2px var(--header-color);
 }
 
-.wait {
-  cursor: wait;
+.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: grey;
+  cursor: not-allowed;
+  box-shadow: 0 0 30px 2px grey;
 }
 
 @keyframes rotation {

@@ -7,12 +7,28 @@ function App() {
 
   const [advice, setAdvice] = useState({id: "0", advice: "Roll the dice to get an advice!"});
 
+  function handleAnimation () {
+    const checkbox = document.getElementById("btn");
+    const button = document.getElementById("button");
+
+    checkbox.setAttribute("disabled", '');
+    button.setAttribute("disabled", '');
+    button.classList.add("disabled");
+    if (checkbox) {
+      checkbox.checked = true;
+      setTimeout(() => {
+        checkbox.checked = false;
+        button.removeAttribute("disabled");
+        button.classList.remove("disabled");
+        checkbox.removeAttribute("disabled");
+      }, 2000)
+    }
+  }
+
   function getData() {
 
-    const btn = document.getElementById("btn");
-    if (btn) {
-      setTimeout(() => {btn.checked = false}, 2000)
-    }
+    handleAnimation();
+
     var request = new XMLHttpRequest();
 
     request.open('GET', 'https://api.adviceslip.com/advice', true);
@@ -31,15 +47,15 @@ function App() {
   }
   
   return (
-    <div className="App">
+    <main className="App">
       <AdviceCard advice={advice} />
       <input type="checkbox" id="btn" defaultChecked={false} />
       <label htmlFor="btn">
-        <div className='advice-roller' onClick={getData} >
+        <button className='advice-roller' onClick={getData} id="button">
           <img src={diceIcon} alt="Dice icon"></img>
-        </div>
+        </button>
       </label>
-    </div>
+    </main>
   );
 }
 

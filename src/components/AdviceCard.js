@@ -4,7 +4,7 @@ import '../stylesheets/AdviceCard.css'
 function adviceCard ( {advice} ) {
     return (
         <div className="advice-card">
-            <span className="advice-id">ADVICE #{advice.id}</span>
+            <h1 className="advice-id">ADVICE #{advice.id}</h1>
             <p className="advice-text">
                 "{advice.advice}"
             </p>
