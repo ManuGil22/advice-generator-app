@@ -36,7 +36,7 @@ function App() {
       <input type="checkbox" id="btn" defaultChecked={false} />
       <label htmlFor="btn">
         <div className='advice-roller' onClick={getData} >
-          <img src={diceIcon}></img>
+          <img src={diceIcon} alt="Dice icon"></img>
         </div>
       </label>
     </div>
