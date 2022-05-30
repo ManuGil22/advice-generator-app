@@ -1,0 +1,31 @@
+.advice-card {
+    height: 340px;
+    width: 540px;
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    font-family: 'Manrope', sans-serif;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advice-id {
+    color: var(--header-color);
+    font-size: 13px;
+    padding: 50px 0 5px 0;
+    letter-spacing: 4px;
+}
+
+.advice-text {
+    font-size: 28px;
+    display: flex;
+    text-align: center;
+    min-height: 170px;
+    margin: 0 35px;
+    align-items: center;
+}
+
+.divider-icon {
+    width: 82%;
+}

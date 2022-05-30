@@ -1,38 +1,55 @@
+:root {
+  --text-color: hsl(193, 38%, 86%);
+  --header-color: hsl(150, 100%, 66%);
+  --divider-color: hsl(217, 19%, 38%);
+  --card-background-color: hsl(217, 19%, 24%);
+  --main-background-color: hsl(218, 23%, 16%);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--main-background-color);
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  user-select: none;
+}
+
+.advice-roller {
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  background-color: var(--header-color);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  top: -35px;
 }
 
-.App-link {
-  color: #61dafb;
+#btn{
+  display: none;
 }
 
-@keyframes App-logo-spin {
+#btn:checked + label > div > img {
+  animation: rotation 2s 0s linear;
+}
+
+.advice-roller:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px 2px var(--header-color);
+}
+
+.advice-roller:target {
+  animation: rotation 2s 0s linear;
+}
+
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
