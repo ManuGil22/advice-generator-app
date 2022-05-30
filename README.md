@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend mentor solution](https://your-solution-url.com)
+- Solution URL: [Frontend mentor solution](https://www.frontendmentor.io/solutions/advicegeneratorapp-QlpwmT_JIT)
 - Live Site URL: [Github project page](https://manugil22.github.io/advice-generator-app/)
 
 ## My process
